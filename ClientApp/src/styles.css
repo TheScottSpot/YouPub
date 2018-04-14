@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.block {
+  margin-top: 20px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}

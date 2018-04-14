@@ -8,7 +8,7 @@
         <span class='icon-bar'></span>
         <span class='icon-bar'></span>
       </button>
-      <a class='navbar-brand' [routerLink]='["/"]'>You Pub</a>
+      <a class='navbar-brand' [routerLink]='["/"]'>YouPub</a>
       <h4 *ngIf="auth.isAuthenticated()">Logged In</h4>
       <h4 *ngIf="!auth.isAuthenticated()">Logged Out</h4>
     </div>
@@ -21,20 +21,17 @@
           </a>
         </li>
         <li [routerLinkActive]='["link-active"]'>
-          <a [routerLink]='["/counter"]' (click)='collapse()'>
-            <span class='glyphicon glyphicon-education'></span> Counter
+          <a [routerLink]='["/account"]' (click)='collapse()'>
+            <span class='glyphicon glyphicon-user'></span> Account
           </a>
         </li>
-        <li [routerLinkActive]='["link-active"]'>
-          <a [routerLink]='["/fetch-data"]' (click)='collapse()'>
-            <span class='glyphicon glyphicon-th-list'></span> Fetch data
-          </a>
+        <li>
+          <a (click)="auth.login()"
+             *ngIf="!auth.isAuthenticated()">Login</a>
         </li>
-        <li><a (click)="auth.login()"
-               *ngIf="!auth.isAuthenticated()">Login</a>
-        </li>
-        <li><a *ngIf="auth.isAuthenticated()"
-               (click)="auth.logout()">Logout</a>
+        <li>
+          <a *ngIf="auth.isAuthenticated()"
+             (click)="auth.logout()">Logout</a>
         </li>
       </ul>
     </div>
