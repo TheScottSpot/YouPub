@@ -31,7 +31,7 @@ export class AuthService {
   }
 
   public testApi() {
-    return this._http.get<any[]>('/api/message');
+    return this._http.get<string>('/api/accounts');
   }
 
   public login(): void {

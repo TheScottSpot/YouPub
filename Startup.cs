@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using YouPub.Context;
+using YouPub.Repository.Interfaces;
+using YouPub.Repository.Implementations;
 
 namespace YouPub
 {
@@ -24,6 +26,9 @@ namespace YouPub
             // register the db context
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            // register the repositories and interfaces
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddMvc();
 

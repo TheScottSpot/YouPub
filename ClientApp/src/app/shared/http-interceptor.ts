@@ -15,6 +15,7 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class MyHttpInterceptor implements HttpInterceptor {
+
   constructor() {
   }
 

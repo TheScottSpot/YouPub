@@ -10,6 +10,8 @@ import {AuthService} from './shared/services/auth.service';
 import {MyHttpInterceptor} from './shared/http-interceptor';
 import { AccountComponent } from './account/account.component';
 import { AccountDetailComponent } from './account-detail/account-detail.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [

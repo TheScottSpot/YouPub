@@ -5,13 +5,25 @@ import { AccountComponent } from '../account/account.component';
 @Component({
   selector: 'app-account-detail',
   templateUrl: './account-detail.component.html',
-  styleUrls: ['./account-detail.component.css']
 })
 export class AccountDetailComponent implements OnInit {
 
-  constructor(private auth: AuthService) { }
+  public message: string;
+
+  constructor(private auth: AuthService,
+            ) { }
 
   ngOnInit() {
+  }
+
+  public async testApi() {
+
+    const users = await this.auth.testApi().toPromise();
+
+    if (users.length) {
+    }
+
+
   }
 
 }

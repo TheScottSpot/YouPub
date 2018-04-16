@@ -10,7 +10,7 @@ export class AccountComponent {
   constructor(private auth: AuthService) { }
 
   ngOnInit() {
-    
+
   }
 
 }
